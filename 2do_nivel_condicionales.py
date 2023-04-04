@@ -62,3 +62,25 @@ while True:
         break
     except ValueError:
         print('valor incorrecto ingresa un numero entero')
+# Reto 7 "Mensajes opcionales"
+while True:
+    try:
+        opcion = int(input('Por favor ingresa un numero del 1 al 6: '))
+        if opcion == 1:
+            print('Hoy aprenderemos sobre prorgamación')
+        elif opcion == 2:
+            print('¿Qué tal tomar un curso de marketing digital?')
+        elif opcion == 3:
+            print('Hoy es un gran día para comenzar a aprender de diseño')
+        elif opcion == 4:
+            print(' ¿Y si aprendemos algo de negocios online?')
+        elif opcion == 5:
+            print('Veamos un par de clases sobre producción audiovisual')
+        elif opcion == 6:
+            print('Tal vez sea bueno desarrollar una habilidad blanda'
+                  ' en Platzi')
+        else:
+            print('numero no valido ingresa uno entre 1 y 6')
+        break
+    except ValueError:
+        print('Solo es permitido números del 1 al 6')
