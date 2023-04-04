@@ -1,30 +1,4 @@
-# Reto 1 "longitud del string"
 import re
-"""el módulo re para trabajar con expresiones regulares. Luego, definimos \n
-la expresión regular patron que valida que la entrada del usuario solo \n
-contiene letras minúsculas, espacios y tildes."""
-curso = str(input('Por favor ingresa tu curso favorito: '))
-longitud = len(curso)
-print(f'El curso que ingresaste es  un string de {longitud} caracteres')
-# Reto 2 "Suma de strings"
-nombre = input('Por favor ingresa tu nombre: ')
-apellido = input('Por favor ingresa tu apellido: ')
-comida = input('Por favor ingresa tu comida favorita: ')
-while not re.match("^[\\w ]+$", apellido, flags=re.UNICODE):
-    """expresión regular utilizada es "^[\\w ]+$", que permite letras, \n
-    números, guiones bajos y espacios en blanco."""
-    print('ingresa un nombre valido')
-    nombre = input('Por favor ingresa tu nombre: ')
-while not re.match("^[\\w ]+$", apellido, flags=re.UNICODE):
-    print('ingresa un apellido valido')
-    apellido = input('Por favor ingresa tu apellido: ')
-while not re.match("^[\\w ]+$", apellido, flags=re.UNICODE):
-    print('ingresa una comida valida')
-    comida = input('Por favor ingresa tu comida favorita: ')
-    break
-print(f'Hola, mi nombres es {nombre} {apellido} y mi comida favorita es'
-      f' {comida}')
-# Reto 3  "Ajusta las iniciales"
 """el módulo re para trabajar con expresiones regulares. Luego, definimos \n
 la expresión regular patron que valida que la entrada del usuario solo \n
 contiene letras minúsculas, espacios y tildes."""
