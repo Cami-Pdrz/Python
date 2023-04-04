@@ -8,6 +8,8 @@ nombre = input('Por favor ingresa tu nombre: ')
 apellido = input('Por favor ingresa tu apellido: ')
 comida = input('Por favor ingresa tu comida favorita: ')
 while not re.match("^[\\w ]+$", apellido, flags=re.UNICODE):
+    """expresión regular utilizada es "^[\\w ]+$", que permite letras, \n
+    números, guiones bajos y espacios en blanco."""
     print('ingresa un nombre valido')
     nombre = input('Por favor ingresa tu nombre: ')
 while not re.match("^[\\w ]+$", apellido, flags=re.UNICODE):
