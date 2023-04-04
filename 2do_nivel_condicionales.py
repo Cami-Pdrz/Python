@@ -32,3 +32,55 @@ else:
     print(f'El numero de comparación {num_comparar} es mayor al limite'
           f'superior {limit_superior}')
 # Reto 4 "I like turtles"
+Pet_user = str(input('Ingresa tu animal favorito:'))
+if Pet_user == 'Tortuga' or Pet_user == 'TORTUGA' or Pet_user == 'tortuga':
+    print('También me gustan las tortugas')
+else:
+    print('Ese animal es genial, pero prefiero las tortugas')
+# Reto 5 "como está el clima"
+LLuvia = input('¿Esta lloviendo? (Si/No): ')
+if LLuvia.lower() == 'si':
+    # método.lower convierte la entrada a minúsculas
+    print('¿esta haciendo mucho viento? (Si/No):?')
+    Viento = input()
+    if Viento.lower() == 'si':
+        print('hace mucho viento para salir con una sombrilla')
+    else:
+        print('por favor lleve una sombrilla')
+else:
+    print('Te deseo un bonito día.')
+# Reto 6 "Edad permitida"
+while True:
+    try:
+        Edad = int(input('Ingresa tu edad: '))
+        if Edad >= 30:
+            print('Nunca es trade para aprender ¿Qué curso tomaremos?')
+        elif Edad >= 18:
+            print('Es un momento excelente para impulsar tu carrera.')
+        else:
+            print('Sabes hacia dónde dirigir tu futuro? Seguro puedo ayudarte')
+        break
+    except ValueError:
+        print('valor incorrecto ingresa un numero entero')
+# Reto 7 "Mensajes opcionales"
+while True:
+    try:
+        opcion = int(input('Por favor ingresa un numero del 1 al 6: '))
+        if opcion == 1:
+            print('Hoy aprenderemos sobre prorgamación')
+        elif opcion == 2:
+            print('¿Qué tal tomar un curso de marketing digital?')
+        elif opcion == 3:
+            print('Hoy es un gran día para comenzar a aprender de diseño')
+        elif opcion == 4:
+            print(' ¿Y si aprendemos algo de negocios online?')
+        elif opcion == 5:
+            print('Veamos un par de clases sobre producción audiovisual')
+        elif opcion == 6:
+            print('Tal vez sea bueno desarrollar una habilidad blanda'
+                  ' en Platzi')
+        else:
+            print('numero no valido ingresa uno entre 1 y 6')
+        break
+    except ValueError:
+        print('Solo es permitido números del 1 al 6')
