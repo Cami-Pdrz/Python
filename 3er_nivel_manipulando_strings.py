@@ -83,3 +83,19 @@ while final < inicial or final > longitud_string:
 fragmento = oración[inicial-1:final]
 print(f'El fragmento correspondiente al rango ({inicial}, {final}) es:'
       f' {fragmento}')
+# Reto 5 Mayúsculas y minúsculas
+palabra_1 = str(input('ingresa por favor una palabra en minúsculas: '))
+# se garantiza solo mayúsculas no números
+while not palabra_1.isalpha() or not palabra_1.islower():
+    print('La palabra debe contener solo letras en mayúsculas: ')
+    palabra_1 = str(input('Ingrese letras en mayúscula: '))
+palabra_2 = str(input('ingresa por favor otra palabra en mayúsculas: '))
+# se garantiza solo minúsculas y no números
+while not palabra_2.isalpha() or not palabra_2.isupper():
+    print('La palabra debe contener solo letras en minúsculas: ')
+    palabra_2 = str(input('Ingrese letras en minúscula: '))
+mayúsculas = palabra_1.upper()
+minúsculas = palabra_2.lower()
+print(f'La palabra: ({palabra_1}) se transforma a:{mayúsculas}, gracias al'
+      f' atributo upper, la palabra ({palabra_2}) queda en: '
+      f'{minúsculas}, gracias al atributo lower.')
