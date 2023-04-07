@@ -99,3 +99,18 @@ minúsculas = palabra_2.lower()
 print(f'La palabra: ({palabra_1}) se transforma a:{mayúsculas}, gracias al'
       f' atributo upper, la palabra ({palabra_2}) queda en: '
       f'{minúsculas}, gracias al atributo lower.')
+# Reto 6 "Nombres cortos y largos"
+import re
+patron = r'^[a-záéíóúüñ\s]+$'
+nombre = str(input('Por favor ingresa tu nombre:'))
+while not re.match(patron, nombre, flags=re.UNICODE):
+    print('solo se admiten letras en minúsculas, espacios y tildes')
+    nombre = str(input('Por favor ingresa de nuevo tu nombre:'))
+if len(nombre) >= 5:
+    print(f'Hola como estas {nombre}')
+else:
+    apellido = str(input('Por favor ingresa tu apellido: '))
+    while not re.match(patron, apellido, flags=re.UNICODE):
+        print('solo se admiten letras en minúsculas, espacios y tildes')
+        apellido = str(input('Por favor ingresa de nuevo tu apellido: '))
+    print(f'Hola como estas {nombre} {apellido}')
