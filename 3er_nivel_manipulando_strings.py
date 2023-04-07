@@ -100,7 +100,6 @@ print(f'La palabra: ({palabra_1}) se transforma a:{mayúsculas}, gracias al'
       f' atributo upper, la palabra ({palabra_2}) queda en: '
       f'{minúsculas}, gracias al atributo lower.')
 # Reto 6 "Nombres cortos y largos"
-import re
 patron = r'^[a-záéíóúüñ\s]+$'
 nombre = str(input('Por favor ingresa tu nombre:'))
 while not re.match(patron, nombre, flags=re.UNICODE):
