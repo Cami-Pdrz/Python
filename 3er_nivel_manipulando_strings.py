@@ -105,11 +105,18 @@ nombre = str(input('Por favor ingresa tu nombre:'))
 while not re.match(patron, nombre, flags=re.UNICODE):
     print('solo se admiten letras en minúsculas, espacios y tildes')
     nombre = str(input('Por favor ingresa de nuevo tu nombre:'))
+palabras = nombre.split()
+capitalizadas = [palabra.capitalize() for palabra in palabras]
+nombre_capitalizado = ' '.join(capitalizadas)
 if len(nombre) >= 5:
-    print(f'Hola como estas {nombre}')
+    print(f'Hola como estas {nombre_capitalizado}')
 else:
     apellido = str(input('Por favor ingresa tu apellido: '))
     while not re.match(patron, apellido, flags=re.UNICODE):
         print('solo se admiten letras en minúsculas, espacios y tildes')
         apellido = str(input('Por favor ingresa de nuevo tu apellido: '))
-    print(f'Hola como estas {nombre} {apellido}')
+    palabras = apellido.split()
+    capitalizadas = [palabra.capitalize() for palabra in palabras]
+    apellido_capitalizado = ' '.join(capitalizadas)
+    print(f'Hola como estas {nombre_capitalizado} {apellido_capitalizado}')
+# Reto 7 "Hablemos Pig Latin! (Puerco Latino)"
