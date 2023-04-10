@@ -1,14 +1,14 @@
-import re
-patron = r'^[a-záéíóúüñ\s]+$'
-nombre = str(input('Por favor ingresa tu nombre:'))
-while not re.match(patron, nombre, flags=re.UNICODE):
-    print('solo se admiten letras en minúsculas, espacios y tildes')
-    nombre = str(input('Por favor ingresa de nuevo tu nombre:'))
-if len(nombre) >= 5:
-    print(f'Hola como estas {nombre}')
+
+palabra = input('Ingresa una palabra que queras traducir a PigLatin: ')
+vocales = ["a", "e", "i", "o", "u"]
+if palabra[0].lower() in vocales:
+    palabra_resultante = palabra + 'way'
 else:
-    apellido = str(input('Por favor ingresa tu apellido: '))
-    while not re.match(patron, apellido, flags=re.UNICODE):
-        print('solo se admiten letras en minúsculas, espacios y tildes')
-        apellido = str(input('Por favor ingresa de nuevo tu apellido: '))
-    print(f'Hola como estas {nombre} {apellido}')
+    primera_consonante = ''
+    for letra in palabra:
+        if letra.lower() not in vocales:
+            primera_consonante += letra
+        else:
+            break
+    palabra_resultante = palabra[len(primera_consonante):] + primera_consonante + 'ay'
+print(f'La palabra en PigLatin es: {palabra_resultante}')
