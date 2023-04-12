@@ -1,3 +1,4 @@
+import math
 # Reto 1 "Multiplicar decimales"
 numero1 = float(input('Por favor ingresa un numero con muchos decimales: '))
 numero2 = float(input('Por favor ingresa otro numero con muchos decimales: '))
@@ -36,3 +37,18 @@ raiz_cuadrada = numero ** 0.5
 resultado = round(raiz_cuadrada, decimales)
 
 print(f'la raíz cuadrada de {numero} es: {resultado}')
+# Reto 4
+# import math
+radio = input('por favor ingresa el radio del circulo a calcular su area: ')
+while not radio.replace('.', '').isdigit():
+    # en esa línea se está utilizando el método replace() de la cadena de \n
+    # texto radio para eliminar el punto decimal. El método replace() \n
+    # reemplaza todas las ocurrencias de una subcadena dentro de una cadena \n
+    # con otra subcadena. En este caso, se está reemplazando el punto decimal\n
+    # "." por una cadena vacía "".
+    print('Solo se admiten números')
+    radio = input('intenta de nuevo, ingresa el radio: ')
+
+radio = float(radio)
+area = round(math.pi * radio**2, 3)
+print(f'El area del circulo con radio {radio} es {area} unidades cuadradas')
