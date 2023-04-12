@@ -52,3 +52,16 @@ while not radio.replace('.', '').isdigit():
 radio = float(radio)
 area = round(math.pi * radio**2, 3)
 print(f'El area del circulo con radio {radio} es {area} unidades cuadradas')
+# Reto 5 "Calcular volumen de un cilindro"
+radio = input('por favor ingresa el radio del cilindro a calcular su volumen:')
+while not radio.replace('.', '').isdigit():
+    print('Solo se admiten numeros')
+    radio = input('intenta de nuevo, ingresa el radio: ')
+altura = input('por favor ingresa la altura del cilindro a calcular su volumen:')
+while not altura.replace('.', '').isdigit():
+    print('Solo se admiten numeros')
+    altura = input('intenta de nuevo, ingresa la altura: ')
+radio = float(radio)
+altura = float(altura)
+volumen = round(math.pi * radio**2 * altura, 1)
+print(f'El volumen del cilindro con radio {radio} y {altura} es {volumen} '
