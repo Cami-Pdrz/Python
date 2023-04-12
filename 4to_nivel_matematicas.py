@@ -59,9 +59,26 @@ while not radio.replace('.', '').isdigit():
     radio = input('intenta de nuevo, ingresa el radio: ')
 altura = input('por favor ingresa la altura del cilindro a calcular su volumen:')
 while not altura.replace('.', '').isdigit():
-    print('Solo se admiten numeros')
+    print('Solo se admiten números')
     altura = input('intenta de nuevo, ingresa la altura: ')
 radio = float(radio)
 altura = float(altura)
 volumen = round(math.pi * radio**2 * altura, 1)
 print(f'El volumen del cilindro con radio {radio} y {altura} es {volumen} '
+      f'unidades cubicas')
+# Reto 6 "Mostrar enteros y residuos"
+entero = input('por favor ingresa un entero a dividir: ')
+while not entero.isdigit():
+    print('solo se admiten números enteros')
+    entero = input('ingresa de nuevo un numero entero: ')
+
+divisor = input('ingresa un numero entero para dividir el numero anterior: ')
+while not divisor.isdigit():
+    print('solo se admiten números enteros')
+    divisor = input('ingresa de nuevo un numero entero: ')
+resultado, residuo = divmod(int(entero), int(divisor))
+# divmod() es una función integrada en Python que toma dos argumentos y \n
+# devuelve una tupla que contiene el cociente y el residuo de la división de \n
+# los dos argumentos.
+print(f'{entero} dividido entre {divisor} es {resultado} y sobra {residuo}.')
+# Reto 7 "Calcular perímetros y áreas"
