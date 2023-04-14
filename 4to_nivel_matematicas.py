@@ -82,3 +82,38 @@ resultado, residuo = divmod(int(entero), int(divisor))
 # los dos argumentos.
 print(f'{entero} dividido entre {divisor} es {resultado} y sobra {residuo}.')
 # Reto 7 "Calcular perímetros y áreas"
+figuras = {'1': 'Triángulo ▲', '2': 'Cuadrado ■ ', '3': 'Pentágono ⬟'}
+for key, value in figuras.items():
+    print(f'{key}.{value}')
+opcion = int(input('Selecciona una figura para calcular su perimetro/area: '))
+if opcion == 1:
+    print("Ha seleccionado el triángulo. Por favor ingresa ")
+    lados = input("los 3 lados del triángulo separados por comas EJ:3,4,5: ")
+    l1, l2, l3 = lados.split(",")
+    perimetro = int(l1) + int(l2) + int(l3)
+    s = (int(l1) + int(l2) + int(l3))/2
+    area = (s * (s - int(l1)) * (s - int(l2)) * (s - int(l3)))**0.5
+    print(f'El perímetro del triángulo con lados {l1}, {l2} y {l3} es'
+          f' {perimetro} unidades lineales')
+    print(f'Y su area es: {area} unidades cuadradas con la formula de Heron')
+elif opcion == 2:
+    print("Ha seleccionado el cuadrado. Por favor ingresa")
+    lados = input("los 2 lados del cuadrados separados por comas EJ:3,4: ")
+    l1, l2 = lados.split(",")
+    perimetro = (int(l1) + int(l2)) * 2
+    area = int(l1) * int(l2)
+    print(f'El perímetro del cuadrado con lados {l1}, {l2} es'
+          f' {perimetro} unidades lineales')
+    print(f'Y su area es: {area} unidades cuadradas')
+elif opcion == 3:
+    print("Ha seleccionado el pentágono. Por favor ingresa")
+    lados = input("los 5 lados del pentagono separados por comas EJ:3,4,5,7,8: ")
+    l1, l2, l3, l4, l5 = lados.split(",")
+    perimetro = (int(l1) + int(l2)) * 2
+    area = (1/4) * ((5 + (5 * (5 * 2)**0.5)) * (int(l1)**2 + int(l2)**2 + int(l3)**2 + int(l4)**2 + int(l5)**2))**0.5
+    area_print = round(area, 3)
+    print(f'El perímetro del pentagono con lados {l1}, {l2}, {l3},'
+          f' {l4}, {l5} es {perimetro} unidades lineales')
+    print(f'Y su area es: {area_print} unidades cuadradas')
+else:
+    print("Opción inválida. Por favor seleccione un número válido.")
