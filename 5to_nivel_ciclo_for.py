@@ -14,3 +14,12 @@ for i in range(veces):
 curso = str(input('Por favor ingresa tu curso favorito de Platzi: '))
 for carácter in curso:
     print(carácter)
+# Reto 4 "Animal en columna ‘n’ veces"
+animal = str(input('Por favor Ingresa tu animal favorito:  '))
+veces = int(input('Por favor ingres el numero de veces que quieres mostrar el '
+                  'animal: '))
+for i in range(veces):
+    for carácter in animal:
+        print(carácter)
+    print('\n')
+# Reto 5 "Tabla de multiplicar"
