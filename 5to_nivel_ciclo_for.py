@@ -10,4 +10,7 @@ while veces <= 0:
     veces = int(input('Se admiten números mayores a 0, intenta de nuevo: '))
 for i in range(veces):
     print(curso)
-# Reto 
+# Reto 3 "Curso en una columna"
+curso = str(input('Por favor ingresa tu curso favorito de Platzi: '))
+for carácter in curso:
+    print(carácter)
