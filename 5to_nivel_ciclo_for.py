@@ -27,3 +27,12 @@ numero = int(input('Ingresa un número para mostrar su tabla de multiplicar: '))
 for i in range(1, 11):
     resultado = numero * i
     print(f'{numero} X {i} = {resultado}')
+# Reto 6 "Cuenta regresiva"
+numero = int(input('Ingresa un número para mostrar su cuenta regresiva: '))
+if numero >= 0:
+    for i in range(numero, 0, -1):
+        print(i)
+else:
+    for i in range(numero, 0, 1):
+        print(i)
+print('¡Cuenta regresiva finalizada!')
