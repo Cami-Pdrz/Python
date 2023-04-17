@@ -36,3 +36,14 @@ else:
     for i in range(numero, 0, 1):
         print(i)
 print('¡Cuenta regresiva finalizada!')
+# Reto 7 "Curso favorito, sin exagerar"
+curso = input('Por favor ingresa tu curso de Platzi favorito: ')
+veces = int(input('Por favor ingres el numero de veces que quieres mostrar el'
+                  ' curso: '))
+if veces <= 0:
+    veces = int(input('Se admiten números mayores a 0, intenta de nuevo: '))
+elif veces >= 15:
+    print(f'El numero {veces} es muy grande, mo te pases de listo ')
+    veces = 3
+for i in range(veces):
+    print(curso)
