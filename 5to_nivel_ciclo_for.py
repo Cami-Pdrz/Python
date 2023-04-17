@@ -48,23 +48,11 @@ elif veces >= 15:
 for i in range(veces):
     print(curso)
 # Reto 8 "Suma autorizada"
-num1 = 1
-sumar = input('deseas sumar el numero al total responde si/no:  ')
-if sumar == str('si'):
-    total = num1
-else:
-    num2 = 2
-    sumar = input('deseas sumar el numero al total responde si/no:  ')
-    if sumar == str('si'):
-        total = + num2
-    else:
-        num3 = 3
-        sumar = input('deseas sumar el numero al total responde si/no:  ')
-        if sumar == str('si'):
-            total = + num3
-        else:
-            num4 = 4
-            sumar = input('deseas sumar el numero al total responde si/no:  ')
-            total = + num4
-            if sumar == str('si'):
-                print(total)
+total = 0
+for i in range(4):
+    num = int(input('Ingresa un número: '))
+    sumar = input('¿Deseas sumar este número al total? (s/n): ')
+    if sumar == 's':
+        total += num
+
+print(f"El total de la suma de los números aceptados es: {total}")
