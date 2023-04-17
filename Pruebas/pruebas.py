@@ -1,23 +1,20 @@
-numero = input('por favor ingresa un numero mayor a 20 para calcular su raiz: ')
-
-# Se verifica que el valor ingresado sea un número mayor a 20\n
-#  atributo isdigit verifica que dentro del string haya solo numeros
-while not numero.isdigit() or int(numero) <= 20:
-    numero = input('solo se admiten numeros mayores a 20: ')
-
-# Se convierte el valor ingresado a un entero
-numero = int(numero)
-
-decimales = input('por favor elige entre 2 o 3 decimales en el resultado: ')
-
-# Se verifica que el valor ingresado sea 2 o 3
-while not decimales.isdigit() or int(decimales) not in [2, 3]:
-    decimales = input('solo se admiten 2 y 3 decimales en el resultado: ')
-
-# Se convierte el valor ingresado a un entero
-decimales = int(decimales)
-
-raiz_cuadrada = numero ** 0.5
-resultado = round(raiz_cuadrada, decimales)
-
-print(f'la raiz cuadrada de {numero} es: {resultado}')
+num1 = 1
+sumar = input('deseas sumar el numero al total responde si/no:  ')
+if sumar == str('si'):
+    total = num1
+else:
+    num2 = 2
+    sumar = input('deseas sumar el numero al total responde si/no:  ')
+    if sumar == str('si'):
+        total = + num2
+    else:
+        num3 = 3
+        sumar = input('deseas sumar el numero al total responde si/no:  ')
+        if sumar == str('si'):
+            total = + num3
+        else:
+            num4 = 4
+            sumar = input('deseas sumar el numero al total responde si/no:  ')
+            total = + num4
+            if sumar == str('si'):
+                print(total)
