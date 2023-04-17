@@ -56,3 +56,19 @@ for i in range(4):
         total += num
 
 print(f"El total de la suma de los números aceptados es: {total}")
+# Reto 9 "recta numérica"
+while True:
+    signo = input('Ingresa el sentido de la recta numérica (+/-): ')
+
+    if signo not in ['+', '-']:
+        print('Error, signo invalido, intenta de nuevo')
+    else:
+        numero = int(input('Indica el limite de la recta numérica: '))
+        if signo == '+':
+            for i in range(0, numero + 1, 1):
+                print(i)
+            else:
+                numero = int(input('Indica el limite de la recta numérica: '))
+                for i in range(0, - numero - 1, - 1):
+                    print(i)
+                    break
