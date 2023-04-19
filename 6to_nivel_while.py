@@ -27,3 +27,17 @@ while otro_num == str('s'):
     break
 else:
     print('la suma de los dos numero es:', total)
+# Reto 4 "Lista de invitados"
+invitados = []
+nombre = input('por favor ingresa el nombre del primer invitado: ')
+invitados.append(nombre)
+nombre = input('por favor ingresa el nombre del segundo invitado: ')
+invitados.append(nombre)
+agregar = input('¿Quieres agregar otro invitado? (s/n): ')
+while agregar == 's':
+    nombre = input('por favor ingresa el nombre del tercer invitado: ')
+    invitados.append(nombre)
+    print('El numero de invitados va en: ', len(invitados))
+    break
+else:
+    print('El numero de invitados va en: ', len(invitados))
