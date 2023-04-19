@@ -41,3 +41,24 @@ while agregar == 's':
     break
 else:
     print('El numero de invitados va en: ', len(invitados))
+# Reto 6 "Un elefante se balanceaba…"
+num_elefante = 1
+print(f'{num_elefante} elefante se balanceaba '
+      f'Sobre la tela de una araña '
+      f'Como veía que resistía '
+      f'Fueron a llamar a un camarada.')
+while num_elefante < 10:
+    elefantes_mas = int(input('Cuántos elefantes más se balancearán? (Ingrese'
+                              ' un número más al mostrado): '))
+    if elefantes_mas == num_elefante + 1:
+        num_elefante += 1
+        if num_elefante == 1:
+            print(f'{num_elefante} elefante se balanceaba')
+        else:
+            print(f'{num_elefante} elefantes se balanceaban '
+                  f'Sobre la tela de una araña '
+                  f'Como veían que resistía '
+                  f'Fueron a llamar a un camarada.')
+    else:
+        print('Número incorrecto, por favor intente de nuevo.')
+
