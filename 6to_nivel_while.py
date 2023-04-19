@@ -41,6 +41,20 @@ while agregar == 's':
     break
 else:
     print('El numero de invitados va en: ', len(invitados))
+# Reto 5 "Adivina el número secreto"
+num_secret = 69
+num_user = int(input('Por favor  adivina un numero del 1 al 100: '))
+contador = 0
+while num_secret != num_user:
+    if num_user > num_secret:
+        print('Tu numero es mayor al secreto.')
+    else:
+        print('Tu numero es menor al secreto.')
+    num_user = int(input('Por favor intenta de nuevo: '))
+    contador += 1
+else:
+    print(f'felicidades adivinaste el numero secreto {num_secret} y te tomo '
+          f'{contador} intentos')
 # Reto 6 "Un elefante se balanceaba…"
 num_elefante = 1
 print(f'{num_elefante} elefante se balanceaba '
